@@ -14,10 +14,14 @@ public:
 	bool IsAlive() const;
 	int GetDamage() const { return damage; }
 	void SetDamage(int newDamage) { damage = newDamage; }
+	bool IsStunned() const;
+	void Stun();
+	void EndTurn();
 
 private:
 	int health;
 	int damage;
+	bool stunned;
 };
 
 #endif 

@@ -13,13 +13,15 @@ public:
 	void Stun();
 	void EndTurn();
 	bool IsStunned() const;
-	bool TrySpecialAttack(BaseUnit& target);
+	bool TrySpecialAttack();
 	void DisplayStatus() const;
+	//void TakeDamage(int amount);
 
 private:
 	int shield;
 	int specialAttackCoolDown;
 	bool isStunned;
+	mt19937 gen;
 
 	static constexpr int SPECIAL_ATTACK_MULTILIER = 2;
 	static constexpr double SPECIAL_ATTACK_SUCCESS_RATE = 0.6;

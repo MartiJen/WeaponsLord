@@ -15,3 +15,18 @@ void BaseUnit::DisplayStatus() const {
 
 bool BaseUnit::IsAlive() const {
 	return health > 0;
+}
+
+void BaseUnit::Stun() {
+	stunned = true;
+}
+
+bool BaseUnit::IsStunned() const {
+	return stunned;
+}
+
+void BaseUnit::EndTurn() {
+	if (stunned) {
+		stunned = false;
+	}
+}

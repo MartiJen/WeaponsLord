@@ -13,9 +13,11 @@ public:
 	void UseSpecialAbility(BaseUnit& target) override;
 	bool TryStunAttack();
 	void DisplayStatus() const;
+	//void TakeDamage(int amount);
 
 private:
 	int stunCoolDown;
+	mt19937 gen;
 
 	static constexpr double STUN_ATTACK_SUCCES_RATE = 0.2;
 	static constexpr int STUN_ATTACK_COOLDOWN = 5;
